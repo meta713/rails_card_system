@@ -1,0 +1,22 @@
+.col-md-3.col-sm-4.col-xs-4.side_menu[style="min-height:625px;margin-top:55px;padding-left:40px;z-index:999;"]
+  div[style="border:solid 1px #c9c9c9;border-radius:10px;"]
+    ul[style="list-style:none;margin-top:0px;line-height:40px;padding:0;"]
+      li[style="padding:33px;font-size:14px;color:#6d6d6d;font-weight:bold;border-bottom:solid 1px #c9c9c9;text-align:center;"]
+        |  ログインユーザ
+        br
+        span[style="text-align:center;"]
+          | stuff
+      li[style="padding:12px;font-size:14px;#{ page == "index" ? "background-color:#E9E9E9;font-weight:bold;" : ""}border-bottom:solid 1px #c9c9c9;text-align:center;"]
+        = link_to "ホーム", card_system_index_path, { style: "text-decoration:none;display:block;color:#6d6d6d;" }
+      li[style="padding:12px;font-size:14px;#{ page == "regist" ? "background-color:#E9E9E9;font-weight:bold;" : ""}text-align:center;border-bottom:solid 1px #c9c9c9;"]
+        = link_to "登録", card_system_regist_path, { style: "text-decoration:none;display:block;color:#6d6d6d;" }
+      li[style="padding:12px;font-size:14px;#{ page == "change" ? "background-color:#E9E9E9;font-weight:bold;" : ""}text-align:center;border-bottom:solid 1px #c9c9c9;"]
+        = link_to "更新", card_system_change_path, { style: "text-decoration:none;display:block;color:#6d6d6d;" }
+      li[style="padding:12px;font-size:14px;#{ page == "use" ? "background-color:#E9E9E9;font-weight:bold;" : ""}text-align:center;border-bottom:solid 1px #c9c9c9;"]
+        = link_to "工房利用", card_system_use_path, { style: "text-decoration:none;display:block;color:#6d6d6d;" }
+    div[style="color:#6d6d6d;text-align:center;padding-top:10px;"]
+      h5[style="font-weight:bold;"]
+        | オプション
+    div[style="margin-top:10px;text-align:center;margin-bottom:45px;"]
+      a.btn[data-toggle="modal" data-target="#myModal" style="line-height: 32px;height: 44px;font-size: 12px;font-weight: bold;width: 90%;margin-top: 15px;color: #ffffff;background-color: #4472c4;"]
+        |  ログアウト

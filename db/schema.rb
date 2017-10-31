@@ -10,7 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030075741) do
+ActiveRecord::Schema.define(version: 20171030095623) do
+
+  create_table "card_users", force: :cascade do |t|
+    t.string "name"
+    t.integer "personalID"
+    t.string "mail"
+    t.string "phoneNumber"
+    t.integer "Balance"
+    t.date "Limit"
+    t.integer "studio_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["studio_user_id"], name: "index_card_users_on_studio_user_id"
+  end
+
+  create_table "cards", force: :cascade do |t|
+    t.string "idm"
+    t.integer "registTimes"
+    t.boolean "Acctive"
+    t.integer "studio_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["studio_user_id"], name: "index_cards_on_studio_user_id"
+  end
+
+  create_table "studio_users", force: :cascade do |t|
+    t.integer "card_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

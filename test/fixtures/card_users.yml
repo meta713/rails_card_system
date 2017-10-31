@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  personalID: 1
+  mail: MyString
+  phoneNumber: MyString
+  Balance: 1
+  Limit: 2017-10-30
+
+two:
+  name: MyString
+  personalID: 1
+  mail: MyString
+  phoneNumber: MyString
+  Balance: 1
+  Limit: 2017-10-30

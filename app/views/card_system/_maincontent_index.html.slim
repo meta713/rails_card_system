@@ -1,0 +1,12 @@
+div
+  p[style="font-size: 16px;"]
+    | 操作を選択してください
+  .row[style="margin-top:20px;padding-right:20px;"]
+    .col-md-5.col-md-offset-1.col-sm-5.col-sm-offset-1.col-xs-12[style="padding:14px;"]
+      = link_to "工房利用", card_system_use_path, { class: "btn btn-default btn-lg btn-block", style: "padding:50px;font-weight:bold;color:rgb(109,109,109);border-radius:12px;"}
+    .col-md-5.col-md-offset-1.col-sm-5.col-sm-offset-1.col-xs-12[style="padding:14px;"]
+      = link_to "登録", card_system_regist_path, { class: "btn btn-default btn-lg btn-block", style: "padding:50px;font-weight:bold;color:rgb(109,109,109);border-radius:12px;"}
+    .col-md-5.col-md-offset-1.col-sm-5.col-sm-offset-1.col-xs-12[style="padding:14px;"]
+      = link_to "変更", card_system_change_path, { class: "btn btn-default btn-lg btn-block", style: "padding:50px;font-weight:bold;color:rgb(109,109,109);border-radius:12px;"}
+    .col-md-5.col-md-offset-1.col-sm-5.col-sm-offset-1.col-xs-12[style="padding:14px;"]
+      = link_to "ホーム", card_system_index_path, { class: "btn btn-default btn-lg btn-block", style: "padding:50px;font-weight:bold;color:rgb(109,109,109);border-radius:12px;"}

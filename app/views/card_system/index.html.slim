@@ -1,2 +1,29 @@
-h1 CardSystem#index
-p Find me in app/views/card_system/index.html.slim
+javascript:
+  page_info = "#{@page}";
+.wrapper[style="min-height: 100%;"]
+  .row
+    = render partial: "layouts/sidemenu", locals: {page: @page}
+    .col-md-9.col-sm-8.col-xs-8.main_content
+      header[style="border-bottom:solid 1px #c9c9c9;text-align:center;padding: 10px 0;margin: 0 20px;"]
+        h3[style="line-height: inherit;font-weight: 400;"]
+          | Card Reader System
+      .container-fluid[style="padding-top:15px;margin: 0 40px 0 20px;"]
+        h2
+          = current_page_title(@page)
+        = render partial: "maincontent_#{@page}", locals: { page: @page }
+= render partial: "layouts/footer"
+#myModal.modal.fade[tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"]
+  .modal-dialog[role="document"]
+    .modal-content[style="border-radius:3px;"]
+      .modal-header
+        h5#exampleModalLabel.modal-title[style="float:left;padding-top:4px;"]
+          | ログアウトしますか？
+        button.close[type="button" data-dismiss="modal" aria-label="Close"]
+          span[aria-hidden="true"]
+            | ×
+      .modal-body
+        | stuff としてログイン中です。
+      .modal-footer
+        a.btn.btn-default[type="button" data-dismiss="modal"]
+          | キャンセル
+        = link_to "ログアウト", destroy_user_session_path, method: :DELETE, class: "btn btn-primary", style: "background-color: #4472c4;"

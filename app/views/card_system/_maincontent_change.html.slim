@@ -1,0 +1,34 @@
+.row.regist_form[style="margin-top:20px;padding-left:20px;margin-bottom:20px;"]
+  form#regist_form.col-md-8.col-sm-8[style="border:solid 1px #c9c9c9;border-radius:6px;padding:20px;" onsubmit="return false;"]
+    .form-group
+      label[for="InputUserName"]
+        | 氏名
+      input#user_name.form-control.input_data[type="text" placeholder="User name" style="width:30%;" maxlength="15"]
+      p.bg-info.confirm_data
+    .form-group
+      label[for="InputStudentNumber"]
+        | 学籍番号
+      input#student_number.form-control.input_data[type="text" placeholder="Student number" style="width:30%;" maxlength="10"]
+      p.bg-info.confirm_data
+    .form-group
+      label[for="InputPhoneNumber"]
+        | 電話番号
+      input#phone_number.form-control.input_data[type="text" placeholder="Phone number" style="width:40%;" maxlength="15"]
+      p.bg-info.confirm_data
+      p.help-block[style="font-size:12px;"]
+        | （左ヅメ、ハイフンなし）
+    .form-group
+      label[for="InputEmail"]
+        | eメールアドレス
+      input#email.form-control.input_data[type="text" placeholder="Email address" style="width:70%;" maxlength="35"]
+      p.bg-info.confirm_data
+    button#submit_btn.btn.btn-default[type="submit" style="margin:12px 0;"]
+      | 確認
+    .btn_group[style="margin:26px 0 8px 0;display:none;float:right;"]
+      button#back_btn.btn.btn-default[type="button"]
+        | 修正する
+      button#send_btn.btn.btn-primary[type="button" style="margin-left:10px;" data-loading-text="送信中..."]
+        | {if $page =="regist"}登録{else if $page == "change"}変更{/if}する
+    #error_area[style="margin-top:10px;display:none;"]
+
+  #alert_area.col-md-4.col-sm-4
